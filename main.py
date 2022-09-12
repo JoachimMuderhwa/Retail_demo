@@ -41,7 +41,7 @@ df["InvoiceDate"] = pd.to_datetime(df["InvoiceDate"])
 df["InvoiceMonth"] = pd.DatetimeIndex(df["InvoiceDate"]).month
 df["InvoiceYear"] = pd.DatetimeIndex(df["InvoiceDate"]).year
 
-
+st.balloons()
 # # Use the full page instead of a narrow central column
 
 
