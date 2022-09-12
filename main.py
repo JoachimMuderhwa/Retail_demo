@@ -24,22 +24,22 @@ st.sidebar.header("Amazure Online Shop")
 
 # """WIDGETS"""
 #IF STATEMENTS
-data = st.sidebar.file_uploader("Upload Dataset", type=['csv'])
-if data is not None:
-        df = pd.read_csv(data)
-        # df = pd.read_csv(url, encoding="ISO-8859-1", low_memory=False)
-        df["Revenue"] = df["UnitPrice"] * df["Quantity"]
-        df["InvoiceDate"] = pd.to_datetime(df["InvoiceDate"])
-        df["InvoiceMonth"] = pd.DatetimeIndex(df["InvoiceDate"]).month
-        df["InvoiceYear"] = pd.DatetimeIndex(df["InvoiceDate"]).year
+# data = st.sidebar.file_uploader("Upload Dataset", type=['csv'])
+# if data is not None:
+#         df = pd.read_csv(data)
+#         # df = pd.read_csv(url, encoding="ISO-8859-1", low_memory=False)
+#         df["Revenue"] = df["UnitPrice"] * df["Quantity"]
+#         df["InvoiceDate"] = pd.to_datetime(df["InvoiceDate"])
+#         df["InvoiceMonth"] = pd.DatetimeIndex(df["InvoiceDate"]).month
+#         df["InvoiceYear"] = pd.DatetimeIndex(df["InvoiceDate"]).year
 
-else:
+# else:
 
-    df = pd.read_csv(url, encoding="ISO-8859-1", low_memory=False)
-    df["Revenue"] = df["UnitPrice"] * df["Quantity"]
-    df["InvoiceDate"] = pd.to_datetime(df["InvoiceDate"])
-    df["InvoiceMonth"] = pd.DatetimeIndex(df["InvoiceDate"]).month
-    df["InvoiceYear"] = pd.DatetimeIndex(df["InvoiceDate"]).year
+df = pd.read_csv(url, encoding="ISO-8859-1", low_memory=False)
+df["Revenue"] = df["UnitPrice"] * df["Quantity"]
+df["InvoiceDate"] = pd.to_datetime(df["InvoiceDate"])
+df["InvoiceMonth"] = pd.DatetimeIndex(df["InvoiceDate"]).month
+df["InvoiceYear"] = pd.DatetimeIndex(df["InvoiceDate"]).year
 
 
 # # Use the full page instead of a narrow central column
